@@ -15,7 +15,7 @@ import (
 
 	ignore "github.com/sabhiram/go-gitignore"
 
-	"aletheia.icu/broccoli/fs"
+	"github.com/humans-group/broccoli/fs"
 )
 
 // Generator collects the necessary info about the package and
@@ -33,7 +33,7 @@ type Generator struct {
 const template = `%s
 package %s
 
-import "aletheia.icu/broccoli/fs"
+import "github.com/humans-group/broccoli/fs"
 
 var %s = fs.New(%t, []byte(%q))
 `
