@@ -1,5 +1,5 @@
 # 🥦 Broccoli
-> `go get -u aletheia.icu/broccoli`
+> `go get -u github.com/humans-group/broccoli`
 
 [![GoDoc](https://godoc.org/aletheia.icu/broccoli/fs?status.svg)](https://godoc.org/aletheia.icu/broccoli/fs)
 [![Travis](https://travis-ci.org/aletheia-icu/broccoli.svg)](https://travis-ci.org/aletheia-icu/broccoli)
