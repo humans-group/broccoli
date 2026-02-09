@@ -3,7 +3,6 @@ package fs
 import (
 	"bytes"
 	"io"
-	"io/ioutil"
 	"os"
 	"path/filepath"
 	"runtime"
@@ -54,7 +53,7 @@ func NewFile(path string) (*File, error) {
 		return nil, err
 	}
 
-	data, err := ioutil.ReadFile(path)
+	data, err := os.ReadFile(path)
 	if err != nil && !fileInfo.IsDir() {
 		return nil, err
 	}
@@ -288,7 +287,7 @@ func (f *File) compress(quality int) ([]byte, error) {
 
 func (f *File) decompress(data []byte) error {
 	r := brotli.NewReader(bytes.NewReader(data))
-	b, err := ioutil.ReadAll(r)
+	b, err := io.ReadAll(r)
 	if err != nil {
 		return err
 	}
